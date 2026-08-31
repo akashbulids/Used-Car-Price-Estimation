@@ -146,6 +146,41 @@ Price Prediction
 
 ---
 
+## 📁 Project Structure
+
+Used-Car-Price-Estimation/
+│
+├── app/
+│   └── app.py
+│
+├── Data/
+│   ├── clean_data/
+│   │   └── preprocessed_data.csv
+│   │
+│   └── raw_data/
+│       └── used_car_price_dataset_extended.csv
+│
+├── notebook/
+│   ├── model/
+│   │   ├── model.pkl
+│   │   ├── preprocessed_data.pkl
+│   │   └── preprocessor.pkl
+│   │
+│   ├── model_training.ipynb
+│   ├── Data_preprocessing.ipynb
+│   └── EDA.ipynb
+│
+├── report/
+│   ├── actual_vs_predicted_graph/
+│   └── EDA/
+│       ├── boxplot/
+│       ├── countplot_categorical/
+│       ├── Distribution/
+│       ├── Heatmap/
+│       └── relationship_target/
+│
+└── README.md
+
 ## 👨‍💻 Author
 
 **Akash**

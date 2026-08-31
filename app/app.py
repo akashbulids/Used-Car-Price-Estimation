@@ -3,11 +3,8 @@ import pandas as pd
 import joblib
 import os
 # Load saved files
-model = joblib.load("notebook/model.pkl")
-columns = joblib.load("notebook/columns.pkl")
-encoder = joblib.load("notebook/encoder.pkl")
-
-print(os.path.exists("notebook/model.pkl"))
+model = joblib.load(r"C:\Users\akash\OneDrive\Documents\ML project\Used Car Price Estimation\notebook\model/model.pkl")
+preprocessor = joblib.load(r"C:\Users\akash\OneDrive\Documents\ML project\Used Car Price Estimation\notebook\model/preprocessor.pkl")
 
 st.title("Used Car Price Prediction")
 
@@ -40,26 +37,10 @@ if st.button("Predict Price"):
         "owner_count": [owner_count],
         "accidents_reported": [accidents_reported]  
     })
+    input_processed = preprocessor.transform(input_data)
+    
 
-    input_data=pd.get_dummies(input_data,
-         columns=[
-            "brand",
-            "fuel_type",
-            "transmission",
-            "service_history",
-            "color"
-                          ])
-
-    input_data["insurance_valid"] = encoder.transform(
-        input_data["insurance_valid"]
-    )
-
-    input_data = input_data.reindex(
-    columns=columns,
-    fill_value=0
-    )
-
-    prd =model.predict(input_data)
+    prd =model.predict(input_processed)
 
     st.success(
     f"Predicted Price: ${prd[0]:,.2f}"
