@@ -1,0 +1,21 @@
+2026-09-16 22:47:04,617 - INFO - Home route accessed
+2026-09-16 22:47:21,109 - INFO - Prediction request received for brand=string
+2026-09-16 22:47:21,136 - INFO - Input data converted to DataFrame
+2026-09-16 22:47:21,256 - INFO - Preprocessing completed
+2026-09-16 22:47:21,258 - INFO - Prediction completed successfully: brand=string, predicted_price=-295084.61794875434
+2026-09-16 22:48:35,093 - INFO - Prediction request received for brand=Toyota
+2026-09-16 22:48:35,096 - INFO - Input data converted to DataFrame
+2026-09-16 22:48:35,109 - INFO - Preprocessing completed
+2026-09-16 22:48:35,110 - INFO - Prediction completed successfully: brand=Toyota, predicted_price=7404.003184755762
+2026-09-16 22:49:24,991 - INFO - Prediction request received for brand=bmw
+2026-09-16 22:49:24,994 - INFO - Input data converted to DataFrame
+2026-09-16 22:49:25,016 - INFO - Preprocessing completed
+2026-09-16 22:49:25,017 - INFO - Prediction completed successfully: brand=bmw, predicted_price=11685.99724083957
+2026-09-16 22:59:10,982 - INFO - Prediction request received for brand=bmw
+2026-09-16 22:59:10,989 - INFO - Input data converted to DataFrame
+2026-09-16 22:59:11,082 - INFO - Preprocessing completed
+2026-09-16 22:59:11,083 - INFO - Prediction completed successfully: brand=bmw, predicted_price=11685.99724083957
+2026-09-16 22:59:59,161 - INFO - Prediction request received for brand=audi
+2026-09-16 22:59:59,163 - INFO - Input data converted to DataFrame
+2026-09-16 22:59:59,184 - INFO - Preprocessing completed
+2026-09-16 22:59:59,185 - INFO - Prediction completed successfully: brand=audi, predicted_price=2534.8970166348427
