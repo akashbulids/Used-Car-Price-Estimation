@@ -12,10 +12,30 @@ from fastapi.middleware.cors import CORSMiddleware
 # Load model
 # -------------------------
 
-model = joblib.load("model/model.pkl")
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    force=True
+)
+
+logger = logging.getLogger(__name__)
+
+logger.info("FastAPI application started")
+
+
+try:
+
+    model = joblib.load("model/model.pkl")
+    logger.info("Model loaded successfully")
 
 # Load preprocessor
-preprocessor = joblib.load("model/preprocessor.pkl")
+    preprocessor = joblib.load("model/preprocessor.pkl")
+    logger.info("Preprocessor loaded successfully")
+
+except Exception as e:
+    logger.exception(f"Error loading model or preprocessor: {e}")
+    raise
+
 
 
 # -------------------------
@@ -24,7 +44,7 @@ preprocessor = joblib.load("model/preprocessor.pkl")
 
 app = FastAPI()
 
-
+logger.info("FastAPI application created")
 # -------------------------
 # CORS
 # -------------------------
@@ -43,24 +63,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent
-LOG_FILE = BASE_DIR / "app.log"
-
-print("LOG FILE:", LOG_FILE)
-
-logging.basicConfig(
-    filename=str(LOG_FILE),
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    force=True
-)
-
-logger = logging.getLogger(__name__)
-
-logger.info("FastAPI application started")
+logger.info("CORS middleware added to FastAPI application")
 
 
 # -------------------------
