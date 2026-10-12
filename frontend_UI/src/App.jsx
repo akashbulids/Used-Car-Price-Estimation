@@ -495,7 +495,7 @@ function App() {
 
         const explanationResponse =
           await fetch(
-            "http://127.0.0.1:8000/explain",
+            "https://used-car-price-estimation-backed.onrender.com/explain",
             {
               method: "POST",
 
