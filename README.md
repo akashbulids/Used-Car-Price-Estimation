@@ -284,7 +284,7 @@ Install the following tools:
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/akashbulids/Used-Car-Price-Estimation
 ```
 
 Navigate to the project directory:
