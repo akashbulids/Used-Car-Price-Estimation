@@ -64,7 +64,7 @@ app = FastAPI()
 
 logger.info("FastAPI application created")
 
-
+#"http://(localhost|127\.0\.0\.1):\d+"
 # =========================================================
 # CORS
 # =========================================================
@@ -72,7 +72,7 @@ logger.info("FastAPI application created")
 app.add_middleware(
     CORSMiddleware,
 
-    allow_origin_regex=r"http://(localhost|127\.0\.0\.1):\d+",
+    allow_origin_regex=r"https://used-car-price-estimation.onrender.com",
 
     allow_credentials=True,
 

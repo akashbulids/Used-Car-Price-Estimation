@@ -447,7 +447,7 @@ function App() {
       // 1. ML PREDICTION
 
       const response = await fetch(
-        "http://127.0.0.1:8000/predict",
+        "https://used-car-price-estimation-backed.onrender.com/predict",
         {
           method: "POST",
 
